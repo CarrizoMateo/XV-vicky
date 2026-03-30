@@ -461,7 +461,7 @@
 
   .gallery {
     padding: 10px 15px;
-    background: url("../assets/Cinta-de-fotos.png") center no-repeat;
+    background: url("../assets/Cinta-de-fotos.png") center cover repeat;
   background-size: 100% 100%; 
   }
 
