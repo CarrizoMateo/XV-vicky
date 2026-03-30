@@ -1,0 +1,485 @@
+ :root {
+        --bg-1: #f8f9fd;
+        --bg-2: #eef2fb;
+        --card: rgba(255, 255, 255, 0.78);
+        --white: #ffffff;
+        --text: #4e5563;
+        --title: #70778b;
+        --accent: #aeb9d9;
+        --accent-strong: #8c9bc7;
+        --border: rgba(174, 185, 217, 0.45);
+        --shadow: 0 18px 45px rgba(140, 155, 199, 0.18);
+        --radius: 28px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 35%),
+          radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.75), transparent 30%),
+          linear-gradient(180deg, var(--bg-1), var(--bg-2));
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          radial-gradient(circle, rgba(255, 255, 255, 0.85) 1px, transparent 1px),
+          radial-gradient(circle, rgba(174, 185, 217, 0.18) 1px, transparent 1px);
+        background-size: 120px 120px, 180px 180px;
+        background-position: 0 0, 40px 60px;
+        opacity: 0.35;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.16;
+        background: url(/assets/bolas\ de\ disco.jpg) center repeat fixed;
+        filter: blur(0.3px);
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .section {
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 110px 20px 70px;
+        position: relative;
+      }
+
+      .section::after {
+        content: "";
+        position: absolute;
+        inset: 22px;
+        pointer-events: none;
+      }
+      .section-fotos {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 110px 0 70px;
+      position: relative;
+      width: 100%;
+}
+      .wrap {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+      }
+     
+      h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        color: #5f677c;
+        margin-top: 40px  ;
+        margin-bottom: 14px;
+        text-align: center;
+      }
+      .gallery {
+      width: 100%;
+      background: url("/assets/Cinta-de-fotos.png") center repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 80px;
+      overflow: hidden;
+      }
+    
+      .gallery-item {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 40px;
+      margin: 0 40px;
+      min-height: auto;
+      border-radius: 0;
+      overflow: visible;
+      }
+      .gallery-img-1 {
+      width: 600px;
+      height: 450px;
+      object-fit: cover;
+      display: block;
+      padding: 0;
+      }
+    .gallery-img-2 { 
+        width: 600px;
+        height: 450px;
+        object-fit: cover;
+        display: block;
+        padding: 0;
+        }
+        .gallery-img-3 {
+        width: 600px;
+        height: 450px;
+        object-fit: cover;
+        display: block;
+        padding: 0;
+        }   
+      .card {
+        padding: 48px 34px;
+      }
+
+      .eyebrow {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: var(--accent-strong);
+      }
+
+      .script {
+        font-family: "Great Vibes", cursive;
+        font-size: clamp(3.4rem, 11vw, 12rem);
+        color: #4c5365;
+        text-align: center;
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .name {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.3rem, 3vw, 2rem);
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #6e768a;
+        margin-top: 10px;
+      }
+
+      .heading {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2.3rem, 5vw, 3.6rem);
+        color: #6a7287;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      .text {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        color: #6a7287;
+        font-size: 1rem;
+        line-height: 1.9;
+      }
+
+      .divider {
+        width: 90px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--accent-strong), transparent);
+        margin: 22px auto;
+      }
+
+      .hero-photo {
+        width: min(300px, 78vw);
+        aspect-ratio: 3 / 4;
+        border-radius: 30px;
+        overflow: hidden;
+        margin: 34px auto 0;
+        background: rgba(255, 255, 255, 0.45);
+      } 
+
+      .countdown {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .time-box {
+        padding: 26px 12px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.55);
+        text-align: center;
+      }
+
+      .time-number {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(2rem, 4vw, 3.3rem);
+        color: #4e5566;
+        font-weight: 600;
+      }
+
+      .time-label {
+        display: block;
+        margin-top: 8px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        color: #8892ab;
+      }
+
+      .event-date {
+        text-align: center;
+        margin-top: 22px;
+        font-family: "Cormorant Garamond", serif;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #697287;
+        font-size: 1.2rem;
+      }
+
+      .calendar-box {
+        max-width: 650px;
+        margin: 0 auto;
+      }
+
+      .calendar-title {
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        color: #697287;
+        font-size: 2rem;
+        margin-bottom: 22px;
+      }
+
+      .calendar-days,
+      .calendar-dates {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+      }
+
+      .calendar-days div {
+        text-align: center;
+        padding: 12px 0;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: #8b93a9;
+        letter-spacing: 0.08em;
+      }
+
+      .calendar-dates div {
+        min-height: 54px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.58);
+        color: #677086;
+      }
+
+      .calendar-dates .empty {
+        visibility: hidden;
+      }
+
+      .calendar-dates .event-day {
+        background: linear-gradient(135deg, #000000, #c6d0ea);
+        color: white;
+        font-weight: 600;
+        box-shadow: 0 10px 24px rgba(140, 155, 199, 0.3);
+      }
+
+      .single-info {
+        text-align: center;
+        max-width: 680px;
+        margin: 0 auto;
+      }
+
+      .single-info .big-text {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        color: #5f677c;
+        margin-bottom: 14px;
+      }
+
+      .single-info p {
+        color: #697287;
+        line-height: 1.9;
+      }
+
+      .dress-icons {
+        font-size: 2.1rem;
+        margin-bottom: 14px;
+      }
+
+      .map-link,
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 22px;
+        padding: 14px 26px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #606470, #747b8b);
+        color: white;
+        font-weight: 600;
+        box-shadow: var(--shadow);
+        transition: transform 0.25s ease, opacity 0.25s ease;
+      }
+
+      .map-link:hover,
+      .btn:hover {
+        background: #000000;
+        opacity: 0.95;
+      }
+
+      .location-note,
+      .alias {
+        margin-top: 18px;
+        color: #788198;
+      }
+
+      .alias-box {
+        margin-top: 24px;
+        padding: 18px 20px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.62);
+        font-size: 1.05rem;
+        color: #5c657b;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+      }
+
+      .small {
+        font-size: 0.88rem;
+        color: #8a92a8;
+        margin-top: 12px;
+      }
+    .icono-vestimenta {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 14px;
+      }
+    .icono-ubicacion {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 14px;
+        }
+    .icono-asistencia {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 14px;
+        }
+    .icono-regalo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 14px;
+        }
+
+@media (max-width: 1440px) {
+  .gallery {
+    padding: 50px 60px;
+    width: 100%;
+  background: url("/assets/Cinta-de-fotos.png") center no-repeat;
+  background-size: 53% 100%; 
+  }
+
+  .gallery-item {
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 30px;
+  }
+
+  .gallery-img-1, .gallery-img-2, .gallery-img-3 {
+    width: 100%;
+    height: 450px;
+  }
+}
+@media (max-width: 1024px) {
+  .gallery {
+    display: flex;
+    padding: 50px 40px;
+    width: 100%;
+    background: url("/assets/Cinta-de-fotos.png") center no-repeat;
+  background-size: 80% 100%; 
+  }
+
+  .gallery-item {
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 20px;
+  }
+
+  .gallery-img {
+    width: auto;
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .gallery {
+    padding: 40px 20px;
+    background: url("/assets/Cinta-de-fotos.png") center no-repeat;
+  background-size: 95% 100%; 
+  }
+
+  .gallery-item {
+    flex-direction: column;
+    gap: 28px;
+    margin: 0 10px;
+  }
+
+  .gallery-img {
+    max-width: auto;
+    height: 300px;
+  }
+}
+@media (max-width: 560px) {
+  .section {
+    padding-top: 70px;
+  }
+
+  .card {
+    padding: 34px 20px;
+  }
+
+  .countdown {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    padding: 10px 15px;
+    background: url("/assets/Cinta-de-fotos.png") center no-repeat;
+  background-size: 100% 100%; 
+  }
+
+  .gallery-item {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .gallery-img {
+    max-width: 100%;
+    width: max(100%, 450px);
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
+  .calendar-days div,
+  .calendar-dates div {
+    min-height: 42px;
+    font-size: 0.82rem;
+  }
+}
