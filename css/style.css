@@ -299,6 +299,21 @@
         font-weight: 600;
         box-shadow: 0 10px 24px rgba(140, 155, 199, 0.3);
       }
+      .contenerdor-calendar {
+        display: flex;
+        align-items: center;
+        max-width: 650px;
+        margin: 50px auto 0;
+        flex-direction: row-reverse;
+      }
+      .text-calendar { 
+        max-width: 700px;
+        margin: 0 22px 0 205px;
+        text-align: center;
+        color: #6a7287;
+        font-size: 1rem;
+        line-height: 1.9;
+      }
 
       .single-info {
         text-align: center;
@@ -503,5 +518,8 @@
   .calendar-dates div {
     min-height: 42px;
     font-size: 0.82rem;
+  }
+  .text-calendar {
+    margin: 0 22px 0 80px;
   }
 }
