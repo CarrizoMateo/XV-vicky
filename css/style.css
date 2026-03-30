@@ -52,7 +52,7 @@
         inset: 0;
         pointer-events: none;
         opacity: 0.16;
-        background: url(/assets/bolas\ de\ disco.jpg) center repeat fixed;
+        background: url("../assets/bolas\ de\ disco.jpg") center repeat fixed;
         filter: blur(0.3px);
       }
 
@@ -100,7 +100,7 @@
       }
       .gallery {
       width: 100%;
-      background: url("/assets/Cinta-de-fotos.png") center repeat;
+      background: url("../assets/Cinta-de-fotos.png") center repeat;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -393,7 +393,7 @@
   .gallery {
     padding: 50px 60px;
     width: 100%;
-  background: url("/assets/Cinta-de-fotos.png") center no-repeat;
+  background: url("../assets/Cinta-de-fotos.png") center no-repeat;
   background-size: 53% 100%; 
   }
 
@@ -413,7 +413,7 @@
     display: flex;
     padding: 50px 40px;
     width: 100%;
-    background: url("/assets/Cinta-de-fotos.png") center no-repeat;
+    background: url("../assets/Cinta-de-fotos.png") center no-repeat;
   background-size: 80% 100%; 
   }
 
@@ -431,7 +431,7 @@
 @media (max-width: 768px) {
   .gallery {
     padding: 40px 20px;
-    background: url("/assets/Cinta-de-fotos.png") center no-repeat;
+    background: url("../assets/Cinta-de-fotos.png") center no-repeat;
   background-size: 95% 100%; 
   }
 
@@ -461,7 +461,7 @@
 
   .gallery {
     padding: 10px 15px;
-    background: url("/assets/Cinta-de-fotos.png") center no-repeat;
+    background: url("../assets/Cinta-de-fotos.png") center no-repeat;
   background-size: 100% 100%; 
   }
 
